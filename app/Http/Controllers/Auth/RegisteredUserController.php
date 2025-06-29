@@ -34,9 +34,9 @@ public function store(Request $request): RedirectResponse
 {
     // Validasi input
     $request->validate([
-        'name' => ['required'],
-        'email' => ['required', 'email', 'unique:users,email'],
-        'password' => ['required'],
+        'name' => 'required',
+        'email' => 'required',
+        'password' => 'required',
     ]);
 
     // Simpan data user ke database

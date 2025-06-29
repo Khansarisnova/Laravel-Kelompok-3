@@ -1,18 +1,17 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container mt-4">
-  <div class="card shadow">
+<div class="container d-flex justify-content-center mt-4">
+  <div class="card shadow w-100" style="max-width: 700px;">
     <div class="card-body">
       <h3 class="text-center mb-4">Edit Data Mahasiswa</h3>
-    </div>
-    
+
       @if(session('Suksess'))
       <div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
         {{ session('Suksess') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
-    
+
       <script>
         setTimeout(function () {
           let alert = document.getElementById('success-alert');
@@ -22,11 +21,10 @@
           }
         }, 3000);
       </script>
-    @endif    
+      @endif
 
       <form action="/Mahasiswa/{{ $Mahasiswa->id }}/Update" method="POST">
         @csrf
-
       <div class="form-group">
         <label for="nim" class="form-label">NIM</label>
         <input name="nim" type="text" class="form-control" value="{{ $Mahasiswa->nim }}">

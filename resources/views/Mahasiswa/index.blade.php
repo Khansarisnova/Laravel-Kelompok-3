@@ -7,12 +7,27 @@
         {{session('Suksess')}}
       </div>
       @endif
-        <div class="text-center my-4">
-    <h1>Data Mahasiswa</h1>
+        <div class="text-center my-3">
+          <img src="{{ asset('images/LOGO_UMUKA1.png') }}" alt="Logo UMMKA" style="height: 150px; margin-bottom: 5px;">
+          <style>
+            .judul-utama {
+                font-size: 20px;
+                text-align: center;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+            .jarak-atas {
+        margin-top: 35px;
+    }
+        </style>
+    <h1 class="judul-utama">Data Mahasiswa</h1>
+    <h2 class="judul-utama">Universitas Muhammadiyah Karanganyar</h2>
+    <h3 class="judul-utama">______________________________________________________________________</h3>
 </div>
 
 <div class="d-flex justify-content-center">
-    <table class="table table-hover table-bordered text-center mx-auto" style="width: 90%;">
+  <table class="table table-hover table-bordered text-center mx-auto jarak-atas" style="width: 90%;">
+
         <tr>
             <th>NIM</th>
             <th>NAMA LENGKAP</th>
